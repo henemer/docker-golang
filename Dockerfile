@@ -10,8 +10,6 @@ COPY . .
 
 RUN go build -v -o /usr/src/app ./...
 
-#CMD ["./app"]
-
 FROM scratch
 
 COPY --from=builder /usr/src/app . 
